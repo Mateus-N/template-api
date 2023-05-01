@@ -56,4 +56,4 @@ service:
 
 <img src="TemplateApi/Images/service.png" alt="Classe ItemService">
 
-LinkedIn: <a href="https://www.linkedin.com/in/mateusnunes620/" style="color: black;">mateusnunes620</a>
+LinkedIn: <a href="https://www.linkedin.com/in/mateusnunes620/" style="color: black;" target="_blank">mateusnunes620</a>
