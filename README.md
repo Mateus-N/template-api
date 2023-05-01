@@ -19,6 +19,8 @@ dotnet new templateapi
 ### appsettings.json
 arquivos dedicados para cada ambiente.
 
+<img src="TemplateApi/Images/getAppsettings.png" alt="Images da configuração adicionando diferentes appsettings.json dependendo do ambiente">
+
 ### Docker
 API já com docker configurado, possuindo também o docker-compose.yml para iniciar a aplicação junto com o container do banco de dados.
 
