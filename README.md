@@ -2,13 +2,13 @@
 
 Este é um template que desenvolvi para agilizar na criação de APIs com o APS.NET Core 7.0, otimizando tempo e podendo ser mais produtivo.
 
-para utilizar em sua máquina basta na pasta do projeto do projeto executar o comando para adicionar o template como opção para iniciar uma aplicação:
+para utilizar em sua máquina, na pasta do projeto do projeto execute o comando para adicionar o template como opção para iniciar uma aplicação:
 
 ```
 dotnet new install .\
 ```
 
-Após isso basta na pasta que deseja desenvolver o projeto executar o comando:
+Após isso, na pasta que deseja desenvolver o projeto, basta executar o comando:
 
 ```
 dotnet new templateapi
