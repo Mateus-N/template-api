@@ -1,0 +1,38 @@
+version: '3.4'
+
+volumes:
+  datatemplate:
+
+services:
+  dbtemplate:
+    image: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - datatemplate:/var/lib/mysql
+      - "~/sql-scripts/setup.sql:/docker-entrypoint-initdb.d/1.sql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: templatedb
+    networks:
+      - template-rede
+
+  templateapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - dbtemplate
+    ports:
+      - "8080:80"
+    restart: always
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Test
+    networks:
+      - template-rede
+
+networks:  
+  template-rede:
+    driver:
+      bridge
