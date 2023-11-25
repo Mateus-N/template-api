@@ -21,8 +21,8 @@ public class Startup
             .AddJsonFile("appsettings.json")
             .AddJsonFile($"appsettings.{Env.EnvironmentName}.json");
 
-        string? connectionString = Configuration
-            .GetConnectionString("TemplateConnection");
+        string connectionString = Configuration
+            .GetConnectionString("TemplateConnection")!;
 
         services.AddDbContext<AppDbContext>(options =>
         {

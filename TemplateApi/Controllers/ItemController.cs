@@ -38,7 +38,7 @@ public class ItemController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> RecuperaPorId(Guid id)
     {
-        logger.LogInformation($"Consultando item Id={id}");
+        logger.LogInformation("Consultando item Id={id}", id);
         try
         {
             ReadItemDto? readDto = await itemService.RecuperaPorId(id);
@@ -50,7 +50,7 @@ public class ItemController : ControllerBase
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, $"Erro ao consultar item ID={id}");
+            logger.LogError(ex, "Erro ao consultar item ID={id}", id);
             return BadRequest(ex.Message);
         }
 
